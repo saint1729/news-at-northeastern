@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>News @ Northeastern</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            min-width: 720px;
+        }
+
+        button {
+            margin: 5px;
+            outline: none;
+        }
+
+        .alert-warning {
+            padding: 10px 25px;
+        }
+
+        .article {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            margin: 10px auto;
+            padding: 20px;
+            background: rgb(245, 245, 245);
+            border: 1px solid #D41B2C;
+            border-radius: 8px;
+            width: 90%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        .article .articleLeft {
+            align-self: center;
+        }
+
+        .article .articleLeft .articleImage {
+            width: 100%;
+            height: auto;
+        }
+
+        .article h5 {
+            padding-left: 10px;
+            text-align: left;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .article .articleRight .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 20px;
+            max-height: 30%;
+            overflow: auto;
+        }
+
+        #getArticles {
+            margin: 0 auto;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 30px 20px;
+        }
+        
+        #header > div {
+            margin: 0px 15px;
+        }
+
+        #header #rightBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+</head>
+
+<body>
+
+<div id="header">
+    <div id="leftBlock">
+        <a href="https://news.northeastern.edu/">
+            <div id="header_logo">
+                <img src="./images/NEULogo.png" />
+            </div>
+        </a>
+    </div>
+    <div id="rightBlock">
+        <h5>News, Discovery, and Analysis from Around the World</h5>
+        <button id="getArticles" type="button" class="btn btn-success">Refresh News</button>
+    </div>
+</div>
+
+
+<div id="articles">
+</div>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/popup.js"></script>
+</body>
+
+</html>
